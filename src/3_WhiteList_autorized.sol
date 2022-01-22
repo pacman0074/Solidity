@@ -9,7 +9,7 @@ contract Whitelist {
         uint age;
     }
 
-    Person [] public People;
+    Person [] public People; 
 
     event Authorized(address _address); 
 
