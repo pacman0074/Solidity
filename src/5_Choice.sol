@@ -8,7 +8,7 @@ contract Choice {
 
     function add (uint _myuint) public {
         choices[msg.sender] = _myuint;  
-    }
+    } 
 
     function get() public view returns (uint) {
         return choices[msg.sender];
