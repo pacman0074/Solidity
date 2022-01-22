@@ -5,7 +5,7 @@ contract HelloWorld {
 	string myString = "Hello World !"; 
 
     function hello() public view returns (string memory) {
-        return myString;
+        return myString; 
     }
 
 } 
