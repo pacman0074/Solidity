@@ -11,7 +11,7 @@ contract Whitelist {
 
     Person [] public People;
 
-    event Authorized(address _address);
+    event Authorized(address _address); 
 
     function authorize (address _address) public {
         whitelist[_address] = true;
