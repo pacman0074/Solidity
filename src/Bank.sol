@@ -7,7 +7,7 @@ mapping (address => uint) balances;
 
 event _deposit(uint _amount);
 event _transfer(address _recipient, uint _amount);
-
+ 
 function deposit( uint256 _amount) external {
      require(msg.sender != address(0), "Zero address cannot execute deposit !");
      require(_amount > 0, "Deposit amount cannot be negative or equal to zero !");
