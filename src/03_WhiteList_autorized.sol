@@ -1,5 +1,5 @@
 //SPDX-License-Identifier: GPL-3.0-or-later
-pragma solidity 0.8.11;
+pragma solidity 0.8.12;
 
 contract Whitelist {
     mapping(address => bool) whitelist;
@@ -9,10 +9,10 @@ contract Whitelist {
         uint age;
     }
 
-    Person [] public People; 
+    Person [] public People;
 
-    event Authorized(address _address); 
-
+    event Authorized(address _address);
+               
     function authorize (address _address) public {
         whitelist[_address] = true;
         emit Authorized (_address);

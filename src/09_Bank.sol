@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.11;
+pragma solidity 0.8.12;
 
 contract Bank {
 
-mapping (address => uint) balances;
+mapping (address => uint) private balances;
 
 event _deposit(uint _amount);
 event _transfer(address _recipient, uint _amount);
- 
-function deposit( uint256 _amount) external {
+
+function deposit( uint256 _amount) public {
      require(msg.sender != address(0), "Zero address cannot execute deposit !");
      require(_amount > 0, "Deposit amount cannot be negative or equal to zero !");
 
@@ -16,7 +16,7 @@ function deposit( uint256 _amount) external {
     emit _deposit(_amount);
 }
 
-function transfer(address _recipient, uint _amount) external {
+function transfer(address _recipient, uint _amount) public  {
     require(msg.sender != address(0), "Zero address cannot execute deposit !");
     require(_amount > 0, "Deposit amount cannot be negative or equal to zero !");
 
