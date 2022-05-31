@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.12;
+pragma solidity 0.8.14;
 
 import "@chainlink/contracts/src/V0.8/VRFConsumerBase.sol";
 
